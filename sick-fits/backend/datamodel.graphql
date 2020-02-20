@@ -1,0 +1,31 @@
+# This is the schema for prisma and the database that lives under Prisma
+# Must run "npm run deply" after changing this file to change teh schema in Prisma
+# this file generates the src/generated/prisma.graphql file
+
+# this file allows you to create a NEW THING in the database 
+
+# This is STEP 1
+
+type User {
+  id: ID! @id @unique
+  name: String!
+  email: String!
+}
+type Item {
+  id: ID! @id @unique
+  title: String!
+  description: String!
+  image: String!
+  largeImage: String!
+  price: Int!
+  # createAt: DateTime! @createdAt
+  # updatedAt: DateTime! @updatedAt
+  # user: User!
+}
+type Player {
+  id: ID! @id @unique
+  name: String!
+  team: String!
+  bio: String!
+  age: Int!
+}
